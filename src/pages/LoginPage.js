@@ -15,22 +15,26 @@ function LoginPage({ setShowRegister, setIsLoggedIn }) {
   return (
     <div className="flex flex-col items-center mt-20">
       <h2 className="text-2xl font-bold mb-4">Login</h2>
-      <form onSubmit={handleLogin} className="bg-white shadow-md rounded-lg p-6 w-80">
+      <form
+        onSubmit={handleLogin}
+        className="bg-white shadow-md rounded-lg p-6 w-80"
+      >
         <input
           type="email"
           placeholder="Email"
-          className="w-full mb-3 p-2 border rounded"
+          className="w-full mb-3 p-2 border border-gray-300 rounded text-black bg-white"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
+
         <div className="relative mb-3">
           <input
-  type={showPassword ? "text" : "password"}
-  placeholder="Password"
-  className="w-full p-2 border rounded text-black"
-  value={password}
-  onChange={(e) => setPassword(e.target.value)}
-/>
+            type={showPassword ? "text" : "password"}
+            placeholder="Password"
+            className="w-full p-2 border border-gray-300 rounded text-black bg-white"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
 
           <span
             className="absolute right-2 top-2 text-sm text-blue-600 cursor-pointer select-none"
@@ -39,7 +43,10 @@ function LoginPage({ setShowRegister, setIsLoggedIn }) {
             {showPassword ? "Hide" : "Show"}
           </span>
         </div>
-        <button type="submit" className="bg-blue-600 text-white w-full p-2 rounded">
+        <button
+          type="submit"
+          className="bg-blue-600 text-white w-full p-2 rounded"
+        >
           Login
         </button>
       </form>
